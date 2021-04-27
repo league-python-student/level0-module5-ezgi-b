@@ -7,7 +7,14 @@ import unittest
 
 
 # TODO Write function definitions below!
-
+def multiply(one, two):
+    return one*two
+def str_cat(var1, var2, var3):
+    return var1 + " " + var2 + " " + var3
+def greater_than(one, two):
+    return two>one
+def get_random_number(low, high):
+    return random(low, high)
 
 class FunctionTests(unittest.TestCase):
 
