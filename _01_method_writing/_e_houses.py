@@ -2,8 +2,23 @@
 Have the turtle draw a row of houses.
 """
 from tkinter import messagebox, simpledialog, Tk
+import turtle
 
-
+def draw_house(t):
+    t.pensize(2)
+    t.pencolor("black")
+    for i in range(5):
+        t.pendown()
+        if i%2 == 0:
+            t.forward(50)
+        else:
+            t.forward(100)
+        t.left(90)
+    t.right(90)
+    t.pencolor("green")
+    t.pensize(4)
+    t.forward(50)
+    t.penup()
 if __name__ == '__main__':
     # TODO)
     #   1) Move the turtle to the left side of the window near the bottom.
@@ -25,4 +40,9 @@ if __name__ == '__main__':
     #      (JUST the roof part): draw_pointy_roof, draw_flat_roof
     #   11) By calling the correct "roof" function, make large houses have
     #      flat roofs and all the others have pointy roofs.
-    pass
+
+    shelly = turtle.Turtle()
+    shelly.penup()
+    shelly.goto(-500, -350)
+    for i in range(10):
+        draw_house(shelly)
