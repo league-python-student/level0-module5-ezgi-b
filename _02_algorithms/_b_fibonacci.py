@@ -18,4 +18,10 @@ if __name__ == '__main__':
     #     prints it. The for loop should repeat 10 times.
     #  4. Now try to figure out how to change the variables before the for
     #     loop repeats so the sequence of numbers is correct.
-    pass
+    numberSecond = 1
+    numberThird = -1
+    for i in range(15):
+        numberFirst = numberSecond + numberThird
+        print(numberFirst)
+        numberThird = numberSecond
+        numberSecond = numberFirst

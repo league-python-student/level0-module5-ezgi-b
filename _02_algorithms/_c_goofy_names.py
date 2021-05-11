@@ -13,4 +13,16 @@ if __name__ == '__main__':
     #     For example, if they enter their name as Alexander Hamilton
     #     their goofy name will be AlExAnDeR HaMiLtOn
     #  3. Show the user the goofy version of their name in a pop-up.
-    pass
+    window = Tk()
+    window.withdraw()
+
+    name = simpledialog.askstring(None, "What is your name?")
+    goofy = ""
+    for i in range(len(name)):
+        if i%2 == 0:
+            goofy += name[i].upper()
+        else:
+            goofy += name[i].lower()
+
+
+    messagebox.showinfo(None, "Your goofy name is this: " + goofy)
